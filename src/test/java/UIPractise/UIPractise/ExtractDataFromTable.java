@@ -66,9 +66,9 @@ public class ExtractDataFromTable {
 
 		}
 		
-//		for(Team data : teamList) {
-//			System.out.println(data);
-//		}
+		for(Team data : teamList) {
+			System.out.println(data);
+		}
 		
 		//JavaStream, transformation
 //		teamList.stream().forEach(i -> System.out.println(i));
