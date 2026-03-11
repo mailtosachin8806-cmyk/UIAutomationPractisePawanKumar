@@ -147,55 +147,54 @@ public class Action {
 		driver.close();
 
 	}
-	
-	@Test(description="KeyBoard Action")
+
+	@Test(description = "KeyBoard Action")
 	public void handleKeyBoardAction() {
-		
+
 		/*
-		 *Ex 1:- ctr+shift+A
-		 * act.keyDown(Keys.CONTROL).keyDown(Keys.SHIFT).sendkeys("A").keyUp(Keys.SHIFT).keyUp(Keys.CONTROL).perform();
+		 * Ex 1:- ctr+shift+A
+		 * act.keyDown(Keys.CONTROL).keyDown(Keys.SHIFT).sendkeys("A").keyUp(Keys.SHIFT)
+		 * .keyUp(Keys.CONTROL).perform();
 		 * 
-		 * Ex 2:- Enter
-		 * act.KeyDown(Keys.ENTER).KeyUP(Keys.ENTER)
+		 * Ex 2:- Enter act.KeyDown(Keys.ENTER).KeyUP(Keys.ENTER)
 		 */
-		
+
 		driver.get("https://text-compare.com/");
 		driver.manage().window().maximize();
-	//	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 		driver.findElement(By.xpath("//textarea[@id='inputText1']")).sendKeys("Welcome to Selenium");
 		Actions act = new Actions(driver);
-		
-		//Ctrl+A - Select the text
-		
+
+		// Ctrl+A - Select the text
+
 		act.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).build().perform();
-		
-		//CTRL+C => Copy the text into clipboard
+
+		// CTRL+C => Copy the text into clipboard
 		act.keyDown(Keys.CONTROL).sendKeys("C").keyUp(Keys.CONTROL).build().perform();
-		
-		//TAB => shift to 2nd box
+
+		// TAB => shift to 2nd box
 		act.keyDown(Keys.TAB).keyUp(Keys.TAB).build().perform();
-		
-		//CTRL+V => Paste the text
+
+		// CTRL+V => Paste the text
 		act.keyDown(Keys.CONTROL).sendKeys("V").keyUp(Keys.CONTROL).build().perform();
-		
+
 		driver.close();
-		
+
 	}
-	
-	@Test(description="Open link through keyboard action")
+
+	@Test(description = "Open link through keyboard action")
 	public void OpentheLinkInNEwTab() {
-		
+
 		driver.get("https://demo.nopcommerce.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+
 		WebElement regLink = driver.findElement(By.xpath("//a[text()='Register']"));
-		
+
 		Actions act = new Actions(driver);
 		act.keyDown(Keys.CONTROL).click(regLink).keyUp(Keys.CONTROL).perform();
-		
-		
+
 		driver.close();
 	}
 }
