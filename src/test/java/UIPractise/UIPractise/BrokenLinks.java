@@ -29,7 +29,7 @@ public class BrokenLinks {
 
 		int noOfBrokenLink = 0;
 		List<WebElement> links = driver.findElements(By.tagName("a"));
-		System.out.println("THe total number of links: " + links.size());
+		System.out.println("THe total number of links : " + links.size());
 
 		for (WebElement linkElement : links) {
 
@@ -59,7 +59,7 @@ public class BrokenLinks {
 			}
 		}
 
-		System.out.println("Number of Brokken Lnks:" + noOfBrokenLink); //42
+		System.out.println(" Number of Broken Links : " + noOfBrokenLink); //42
 		driver.quit();
 	}
 
