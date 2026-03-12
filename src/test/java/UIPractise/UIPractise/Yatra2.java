@@ -92,7 +92,7 @@ public class Yatra2 {
 			
 			System.out.println(lowestPrice);
 			WebElement dateElement	= priceElement.findElement(By.xpath(".//../.."));
-			String result = dateElement.getAttribute("aria-label") + "----Price is Rs" + lowestPrice;
+			String result = dateElement.getAttribute("aria-label") + "----Price is Rs " + lowestPrice;
 			return result;
 		}
 		
@@ -120,7 +120,7 @@ public class Yatra2 {
 			}
 			else
 			{
-				System.out.println("The lowest price for the two months is" + next);
+				System.out.println("The lowest price for the two months is " + next);
 			}
 		}
 
