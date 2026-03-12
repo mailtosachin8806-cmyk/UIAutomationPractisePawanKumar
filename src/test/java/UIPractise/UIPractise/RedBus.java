@@ -45,7 +45,7 @@ public class RedBus {
 
 		WebElement locationSearchResult = searchList.get(0);
 		// Chaning of webelement
-		By locationNameLocator = By.xpath("//div[contains(@class,'listHeader')]");
+		By locationNameLocator = By.xpath(".//div[contains(@class,'listHeader')]");
 		List<WebElement> locationList = locationSearchResult.findElements(locationNameLocator);
 		System.out.println(locationList.size());
 		for (WebElement location : locationList) {
@@ -67,7 +67,7 @@ public class RedBus {
 		System.out.println(toSearchList.size());
 
 		WebElement toLocationCategory = toSearchList.get(0);
-		By toLocationNameLocator = By.xpath("//div[contains(@class,'listHeader')]");
+		By toLocationNameLocator = By.xpath(".//div[contains(@class,'listHeader')]");
 		List<WebElement> toLocationList = toLocationCategory.findElements(toLocationNameLocator);
 		System.out.println(toLocationList.size());
 		for (WebElement toLocation : toLocationList) {
