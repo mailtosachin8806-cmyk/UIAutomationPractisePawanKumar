@@ -35,9 +35,11 @@ public class RedBusAutomation2 {
 		By searchSuggestionSectionLocator = By.xpath("//div[contains(@class,'searchSuggestionWrapper')]");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(searchSuggestionSectionLocator));
 
+		//Select a Departure and Boarding location
 		selectBoardingLocation(driver, wait, "Mumbai"); // For location
 		selectDepartureLocation(driver, wait, "Pune"); // To location
 
+		//Click on Search Button
 		By searchButtonLocator = By.xpath("//button[contains(@class,'searchButtonWrapper')]");
 		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(searchButtonLocator));
 		searchButton.click();
