@@ -107,8 +107,8 @@ public class Yatra2 {
 			String currentPrice =currentMonthPrice.split("Rs")[1];
 			String nextPrice =nextMonthPrice.split("Rs")[1];
 					
-			int current = Integer.parseInt(currentPrice);
-			int next = Integer.parseInt(nextPrice);
+			int current = Integer.parseInt(currentPrice.trim());
+			int next = Integer.parseInt(nextPrice.trim());
 			
 			if(current<next)
 			{
